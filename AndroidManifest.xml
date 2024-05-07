@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.savology">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Fine location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Fine location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Coarse location -->
+
+    <!-- Camera permission -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Camera -->
+
+    <!-- Camera feature -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" /> <!-- Camera hardware -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- MainActivity is the entry point of the app -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LandingActivity for displaying landing page -->
+        <activity android:name=".LandingActivity"
+            android:exported="true">        <!-- Add an intent-filter or set the exported attribute if necessary -->
+        </activity>
+
+        <!-- TrackHealthActivity for tracking health -->
+        <activity android:name=".TrackHealthActivity"
+            android:exported="true">
+            <!-- Add an intent-filter or set the exported attribute if necessary -->
+        </activity>
+
+        <!-- Declare other activities as needed -->
+        <!-- For example:
+        <activity android:name=".YourOtherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        -->
+
+    </application>
+
+</manifest>
